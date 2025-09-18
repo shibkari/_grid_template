@@ -1,1 +1,6 @@
 @use "../../abstracts" as *;
+
+.header__overlay {
+  background-color: rgb($color-primary, 0.8);
+  @include abs-position;
+}

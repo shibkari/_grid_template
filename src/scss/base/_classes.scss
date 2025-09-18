@@ -1,1 +1,48 @@
 @use "../abstracts" as *;
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75em 1em;
+  
+  letter-spacing: 0.1em;
+
+  border-style: solid;
+  border-width: 2px;
+  transition: bachround-color 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+  &--light {
+    background-color: rgba($color-white, 0.1);
+    border-color: $color-white;
+    font-size: 1.125em;
+
+    @include lg-min {
+      min-width: 250px;
+      min-height: 60px;
+      font-size: 1.125em;
+    }
+
+    @include lg-md {
+      min-width: 170px;
+      min-height: 40px;
+    }
+
+    @include md {
+      min-width: 170px;
+      min-height: 40px;
+    }
+  }
+
+  &--primary {
+
+  }
+}
+
+.overflow-hidden {
+  @include overflow-hidden;
+}
