@@ -11,10 +11,10 @@
 
   &__grid {
     display: grid;
-    gap: $gap;
 
     margin-bottom: $gap;
 
+    gap: $gap;
     @include lg-min {
       grid-template-areas: "a1 a1 a2 a3" "a4 a5 a6 a6";
       grid-template-columns: repeat(4, 1fr);
@@ -27,7 +27,7 @@
       grid-template-areas: "a1 a2" "a3 a4" "a5 a6";
       grid-template-columns: repeat(2, 1fr);
     }
-    @include sm-min {
+    @include sm {
       grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6";
     }
   }
