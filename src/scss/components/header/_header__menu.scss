@@ -1,6 +1,6 @@
 @use "../../abstracts" as *;
 
-.header {
+.header__menu {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -18,9 +18,9 @@
   &-container {
     display: grid;
     align-items: center;
-    gap: $gap;
 
     @extend %container;
+    gap: $gap;
     grid-template-columns: auto 1fr;
   }
 }

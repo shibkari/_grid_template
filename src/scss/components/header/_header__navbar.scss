@@ -3,11 +3,11 @@
 .header__navbar {
   &-list {
     @include md-min {
-      display: grid;
-      gap: $gap;
+      display: grid !important;
       justify-content: end;
 
-      grid-template-columns: repeat(auto-fit, minmax(0, max-content));
+      gap: $gap;
+      grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
       @include unlist(0 (-$gap-sm) 0 0);
     }
     @include md {
@@ -24,14 +24,18 @@
       @include unlist;
 
       &::before {
+        position: absolute;
         z-index: -1;
+        top: -$gap;
+        right: -$gap;
+        bottom: -$gap;
+        left: -$gap;
 
         content: "";
 
         background-color: rgba($color-gray-dark, 0.25);
 
         backdrop-filter: blur(5px);
-        @include abs-position(-$gap, -$gap, -$gap, -$gap);
       }
     }
   }
@@ -45,6 +49,7 @@
   &-link {
     display: block;
 
+    transition: color 0.3s;
     letter-spacing: 0.09em;
 
     font-size: 1.125rem;
@@ -58,7 +63,7 @@
 
     &:hover,
     &:focus {
-      background-color: $color-accent;
+      color: $color-accent;
     }
   }
 
